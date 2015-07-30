@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="ru RU">
+<meta charset="utf-8">
+<head>
+<title>
+</title>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+
+<div id="todoapp">
+<header>
+<center><h1>Everyдневник</h1>
+<h5>Помещайте, редактируйте и следите здесь за списком своих дел</h5>
+<input type="text" id="new-todo" placeholder="Какое задание добавим?">
+</center>
+</header>
+
+
+<section id="main">
+<input type="checkbox" id="toggle-all"><label  for="toggle-all" id="l">Отметить все как выполненные</label>
+<div class="clear_float"></div>
+<ul id="todo-list">
+</ul>
+</section>
+
+
+<footer>
+	<a id="clear-completed">Удалить завершенные</a>
+	<div id="todo-count"></div>
+</footer>
+
+</div>
+
+<div id="instructions">
+	<h5>Инструкции:</h5>
+    <p>– Двойной щелчек мыши для редактирования задания</p>
+	<p>– Клавиша Enter - добавление</p>
+    <br><br>
+    <p>Разработал: Дмитрий Кухарчук</p>
+  </div>
+
+
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/underscore.js"></script>
+<script type="text/javascript" src="js/backbone.js"></script>
+<script type="text/javascript" src="js/backbone.localStorage.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+<script type="text/template" id="item-template">
+    <div class="view">
+      <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+      <label><%- title %></label>
+      <a class="destroy">Удалить</a>
+    </div>
+    <input class="edit" type="text" value="<%- title %>" />
+    <a class="cancel-editing"><img src="img/cancelEditing.png"></a>
+    <div class="clear_float"></div>
+  </script>
+
+  <script type="text/template" id="stats-template">
+    <% if (done) { %>
+      <a id="clear-completed">Удалить <%= done %><%= done == 1 ? ' задачу' : ' задач' %></a>
+    <% } %>
+    <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+  </script>
+</body>
+</html>

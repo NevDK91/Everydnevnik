@@ -1,0 +1,146 @@
+body {
+	margin:0;
+	padding:0;
+	background:url('../img/back.png') repeat-x;
+}
+h5{
+	color:gray;
+	font-weight:normal;
+}
+#todoapp{
+	width:540px;
+	margin:auto;
+	height:auto;
+	background:white;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	border:1px solid white;
+	border-radius: 0 0 5px 5px;
+	padding-bottom:20px;
+}
+#new-todo{
+	width:480px;
+	height:50px;
+	margin:auto;
+	font-size:16pt;
+}
+
+/* СТИЛИ ПЛЕЙСХОЛДЕРА ИНПУТА */
+#new-todo::-webkit-input-placeholder {
+   font-size:16pt;
+}
+
+#new-todo:-moz-placeholder { /* Firefox 18- */
+  font-size:16pt; 
+ }
+
+#new-todo::-moz-placeholder {  /* Firefox 19+ */
+   font-size:16pt;
+   font-weight:light;
+}
+
+#new-todo:-ms-input-placeholder {  
+   font-size:16pt; 
+}
+
+#todo-list{
+	max-width:520px;
+	word-wrap:break-word;
+}
+
+#toggle-all{
+	display:block;
+	float:left;
+	border:1px solid red;
+	background-color:red;
+	width:10px;
+	height:10px;
+	margin-left:25px;
+	margin-top:10px;
+}
+#l{
+	display:block!important;
+	float:left!important;
+	margin-left:5px;
+	margin-top:6px;
+}
+
+.clear_float{clear:both;}
+
+#instructions{
+	color:gray;
+	display:block;
+	width:auto;
+	text-align:center;
+	margin:auto;
+	margin-top:20px;
+}
+#instructions p{
+	display:block;
+	width:auto;
+	margin:auto;
+}
+
+/* Стили для инпута редактирования отдельной задачи при двойном щелчке на ней */
+.view .toggle{
+	display:block;
+	float:left;
+}
+.view label{
+	display:block;
+	float:left;
+	margin-left:5px;
+	max-width:420px;
+	word-break: break-all;
+}
+.view .destroy{
+	display:block;
+	float:right;
+	margin-right:10px;
+	cursor:pointer;
+
+}
+
+footer{
+	background:#EEFCFF;
+	height:30px;
+	padding-top:10px;
+}
+.todo-count{
+	color:gray;
+	margin-left:10px;
+}
+
+#clear-completed{
+	display:block;
+	float:right;
+	margin-right:10px;
+	font-size:12px;
+	cursor:pointer;
+}
+
+.done{
+	color:red;
+	text-decoration: line-through!important;
+	display:inline!important;
+}
+#todo-list li{
+	list-style-type:none;
+}
+
+#todo-list li .done{
+	text-decoration: line-through!important;
+}
+
+.edit{
+	margin-left:5px;
+	font-size:12px;
+	margin-bottom:15px;
+}
+.cancel-editing{
+	font-size:12px;
+	cursor:pointer;
+}
+.cancel-editing img{
+	margin-bottom:10px;
+	margin-left:5px;
+}
